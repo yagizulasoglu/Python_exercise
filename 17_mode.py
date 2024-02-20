@@ -11,3 +11,14 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    numsSet = set(nums)
+    count = 0
+    most = 0
+    for num in numsSet:
+        temp = nums.count(num)
+        if temp > count:
+            count = temp
+            most = num
+    return most
+
+# look at solution     frequency counter
